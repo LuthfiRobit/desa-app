@@ -1,0 +1,134 @@
+/* Finance Specific Styles */
+.finance-stat-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.finance-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.finance-stat-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+}
+
+.finance-stat-card.pendapatan::after {
+    background-color: #2d8659;
+}
+
+.finance-stat-card.belanja::after {
+    background-color: #e63946;
+}
+
+.finance-stat-card.pembiayaan::after {
+    background-color: #457b9d;
+}
+
+.finance-stat-card .icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+}
+
+.finance-stat-card.pendapatan .icon {
+    background-color: rgba(45, 134, 89, 0.1);
+    color: #2d8659;
+}
+
+.finance-stat-card.belanja .icon {
+    background-color: rgba(230, 57, 70, 0.1);
+    color: #e63946;
+}
+
+.finance-stat-card.pembiayaan .icon {
+    background-color: rgba(69, 123, 157, 0.1);
+    color: #457b9d;
+}
+
+.finance-stat-card h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.finance-stat-card p {
+    color: var(--text-light);
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.chart-container {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    height: 100%;
+}
+
+.chart-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding-bottom: 1rem;
+}
+
+.finance-table-wrapper {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    overflow-x: auto;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    font-weight: 600;
+    padding: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.table td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.progress-sm {
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}

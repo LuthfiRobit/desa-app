@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <title>Profil &amp; Informasi Desa | Admin Desa Sukorejo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/x-icon" />
+    <!-- 1. Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        id="main-font-link" />
+    <!-- 2. Icon Packs -->
+    <link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css" />
+    <link rel="stylesheet" href="../assets/fonts/feather.css" />
+    <link rel="stylesheet" href="../assets/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="../assets/fonts/material.css" />
+    <!-- 3. Template Core CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css" id="main-style-link" />
+    <link rel="stylesheet" href="../assets/css/style-preset.css" />
+    <!-- 4. Custom Desa CSS -->
+    <style>
+        .ck-editor__editable_inline {
+            min-height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+
+    <nav class="pc-sidebar">
+        <div class="navbar-wrapper">
+            <div class="m-header">
+                <a href="index.html" class="b-brand text-primary">
+                    <div class="d-flex align-items-center gap-2">
+                        <div
+                            style="width:36px;height:36px;background:linear-gradient(135deg,#2e7d32,#66bb6a);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+                            <i class="ti ti-building-community text-white" style="font-size:20px;"></i></div>
+                        <div>
+                            <div class="desa-brand-text">Desa Sukorejo</div>
+                            <div class="desa-brand-sub">Panel Administrasi</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="navbar-content">
+                <ul class="pc-navbar">
+                    <li class="pc-item pc-caption"><label>Beranda</label></li>
+                    <li class="pc-item"><a href="index.html" class="pc-link"><span class="pc-micon"><i
+                                    class="ti ti-dashboard"></i></span><span class="pc-mtext">Dashboard</span></a></li>
+                    <li class="pc-item pc-caption"><label>Manajemen Konten</label></li>
+                    <li class="pc-item"><a href="slider.html" class="pc-link"><span class="pc-micon"><i
+                                    class="ti ti-photo"></i></span><span class="pc-mtext">Slider Beranda</span></a></li>
+                    <li class="pc-item"><a href="kategori-berita.html" class="pc-link"><span class="pc-micon"><i
+                                    class="ti ti-tag"></i></span><span class="pc-mtext">Kategori Berita</span></a></li>
+                    <li class="pc-item"><a href="berita.html" class="pc-link"><span class="pc-micon"><i
+                                    class="ti ti-news"></i></span><span class="pc-mtext">Berita / Artikel</span></a>
+                    </li>
+                    <li class="pc-item"><a href="agenda.html" class="pc-link"><span class="pc-micon"><i
+                                    class="ti ti-calendar-event"></i></span><span class="pc-mtext">Agenda
+                                Desa</span></a></li>
+                    <li class="pc-item"><a href="galeri.html" class="pc-link"><span class="pc-micon"><i
+                                    class="ti ti-camera"></i></span><span class="pc-mtext">Galeri Kegiatan</span></a>
+                    </li>
+                    <li class="pc-item pc-caption"><label>Layanan Publik</label></li>
+                    <li class="pc-item"><a href="kategori-dokumen.html" class="pc-link"><span class="pc-micon"><i
+                                    class="ti ti-folder"></i></span><span class="pc-mtext">Kategori Dokumen</span></a>
+                    </li>
+                    <li class="pc-item"><a href="dokumen.html" class="pc-link"><span class="pc-micon"><i
+                                    class="ti ti-file-description"></i></span><span class="pc-mtext">Pusat
+                                Unduhan</span></a></li>
+                    <li class="pc-item pc-caption"><label>Keuangan &amp; Transparansi</label></li>
+                    <li class="pc-item"><a href="apbdes.html" class="pc-link"><span class="pc-micon"><i
+                                    class="ti ti-cash"></i></span><span class="pc-mtext">Data APBDes</span></a></li>
+                    <li class="pc-item pc-caption"><label>Pengaturan Sistem</label></li>
+                    <li class="pc-item active"><a href="profil-desa.html" class="pc-link"><span class="pc-micon"><i
+                                    class="ti ti-building-community"></i></span><span class="pc-mtext">Profil &amp; Info
+                                Desa</span></a></li>
+                    <li class="pc-item"><a href="user-mgmt.html" class="pc-link"><span class="pc-micon"><i
+                                    class="ti ti-users"></i></span><span class="pc-mtext">Manajemen Pengguna</span></a>
+                    </li>
+                    <li class="pc-item pc-caption"><label>Akun</label></li>
+                    <li class="pc-item"><a href="profil.html" class="pc-link"><span class="pc-micon"><i
+                                    class="ti ti-user"></i></span><span class="pc-mtext">Profil Saya</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pc-header">
+        <div class="header-wrapper">
+            <div class="me-auto pc-mob-drp">
+                <ul class="list-unstyled">
+                    <li class="pc-h-item header-mobile-collapse"><a href="#"
+                            class="pc-head-link head-link-secondary ms-0" id="sidebar-hide"><i
+                                class="ti ti-menu-2"></i></a></li>
+                    <li class="pc-h-item pc-sidebar-popup"><a href="#" class="pc-head-link head-link-secondary ms-0"
+                            id="mobile-collapse"><i class="ti ti-menu-2"></i></a></li>
+                </ul>
+            </div>
+            <div class="ms-auto">
+                <ul class="list-unstyled">
+                    <li class="dropdown pc-h-item header-user-profile">
+                        <a class="pc-head-link head-link-primary dropdown-toggle arrow-none me-0"
+                            data-bs-toggle="dropdown" href="#" role="button">
+                            <img src="../assets/images/user/avatar-2.jpg" alt="Admin" class="user-avtar" />
+                        </a>
+                        <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown">
+                            <div class="dropdown-header">
+                                <h4>Halo, <span class="small text-muted">Admin Desa</span></h4>
+                                <hr />
+                                <a href="profil.html" class="dropdown-item"><i class="ti ti-user"></i> Profil Saya</a>
+                                <a href="login.html" class="dropdown-item"><i class="ti ti-logout"></i> Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="pc-container">
+        <div class="pc-content">
+
+            <div class="page-header-desa mb-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h4><i class="ti ti-building-community me-2"></i>Profil &amp; Informasi Desa</h4>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0" style="font-size:0.83rem;">
+                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                <li class="breadcrumb-item">Pengaturan Sistem</li>
+                                <li class="breadcrumb-item active">Profil &amp; Informasi Desa</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-primary" onclick="alert('Perubahan berhasil disimpan!')">
+                            <i class="ti ti-device-floppy me-2"></i>Simpan Perubahan
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-header border-bottom pb-0">
+                            <ul class="nav nav-tabs border-0" id="profilTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="identitas-tab" data-bs-toggle="tab"
+                                        data-bs-target="#identitas" type="button" role="tab">
+                                        <i class="ti ti-id me-2"></i>Identitas &amp; Kades
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="statistik-tab" data-bs-toggle="tab"
+                                        data-bs-target="#statistik" type="button" role="tab">
+                                        <i class="ti ti-chart-bar me-2"></i>Statistik &amp; Narasi
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="struktur-tab" data-bs-toggle="tab"
+                                        data-bs-target="#struktur" type="button" role="tab">
+                                        <i class="ti ti-hierarchy me-2"></i>Struktur Organisasi
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content" id="profilTabsContent">
+
+                                <!-- Tab Identitas & Kades -->
+                                <div class="tab-pane fade show active" id="identitas" role="tabpanel">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="mb-4">
+                                                <h5 class="mb-3 border-bottom pb-2">Informasi Umum</h5>
+                                                <div class="row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label-desa">Nama Desa <span
+                                                                class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control" value="Sukorejo" />
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label-desa">Kecamatan <span
+                                                                class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control" value="Kotaanyar" />
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label-desa">Kabupaten <span
+                                                                class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control" value="Probolinggo" />
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label-desa">Provinsi <span
+                                                                class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control" value="Jawa Timur" />
+                                                    </div>
+                                                    <div class="col-12 mb-3">
+                                                        <label class="form-label-desa">Alamat Kantor Desa <span
+                                                                class="text-danger">*</span></label>
+                                                        <textarea class="form-control"
+                                                            rows="2">Jl. Raya Sukorejo No. 1, Kec. Kotaanyar, Kab. Probolinggo, 67293</textarea>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label-desa">Email Desa</label>
+                                                        <input type="email" class="form-control"
+                                                            value="pemdes@sukorejo.desa.id" />
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label-desa">Nomor Telepon</label>
+                                                        <input type="text" class="form-control" value="08123456789" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div>
+                                                <h5 class="mb-3 border-bottom pb-2">Kepala Desa</h5>
+                                                <div class="mb-3">
+                                                    <label class="form-label-desa">Nama Kepala Desa <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control"
+                                                        value="Bpk. Suryanto, S.Pd." />
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label-desa">Pesan Sambutan Kepala Desa</label>
+                                                    <textarea class="form-control ckeditor-classic" id="pesanSambutan"
+                                                        rows="10">Selamat datang di website resmi Desa Sukorejo...</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card border border-light">
+                                                <div class="card-header bg-light-primary">
+                                                    <h6 class="mb-0 text-primary">Foto Kepala Desa</h6>
+                                                </div>
+                                                <div class="card-body text-center">
+                                                    <div class="mb-3">
+                                                        <img src="../assets/images/user/avatar-2.jpg" alt="Foto Kades"
+                                                            class="img-thumbnail rounded"
+                                                            style="width: 200px; height: 250px; object-fit: cover;" />
+                                                    </div>
+                                                    <input type="file" class="form-control form-control-sm mb-2"
+                                                        accept="image/*" />
+                                                    <small class="text-muted d-block">Format: JPG, PNG. Rekomendasi
+                                                        rasio 4:5 (Portrait).</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tab Statistik & Narasi -->
+                                <div class="tab-pane fade" id="statistik" role="tabpanel">
+                                    <h5 class="mb-3 border-bottom pb-2">Statistik Desa</h5>
+                                    <div class="row mb-4">
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-label-desa">Jumlah Penduduk (Jiwa)</label>
+                                            <input type="number" class="form-control" value="4500" />
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-label-desa">Luas Wilayah (km²)</label>
+                                            <input type="text" class="form-control" value="12.5" />
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-label-desa">Jumlah Dusun</label>
+                                            <input type="number" class="form-control" value="5" />
+                                        </div>
+                                    </div>
+
+                                    <h5 class="mb-3 border-bottom pb-2">Narasi Profil</h5>
+                                    <div class="mb-4">
+                                        <label class="form-label-desa">Visi Desa</label>
+                                        <textarea class="form-control"
+                                            rows="3">Terwujudnya Desa Sukorejo yang Sejahtera, Religius, dan Berbudaya melalui Tata Kelola Pemerintahan yang Bersih dan Inovatif.</textarea>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label-desa">Misi Desa</label>
+                                        <textarea class="form-control ckeditor-classic" id="misiDesa" rows="6">
+                                    <ul>
+                                        <li>Meningkatkan kualitas sumber daya manusia melalui pendidikan dan kesehatan.</li>
+                                        <li>Mengoptimalkan potensi pertanian dan pemberdayaan ekonomi kerakyatan.</li>
+                                        <li>Meningkatkan kualitas infrastruktur desa.</li>
+                                    </ul>
+                                </textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label-desa">Sejarah Desa</label>
+                                        <textarea class="form-control ckeditor-classic" id="sejarahDesa"
+                                            rows="10">Desa Sukorejo didirikan pada tahun 1920...</textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Tab Struktur Organisasi -->
+                                <div class="tab-pane fade" id="struktur" role="tabpanel">
+                                    <div class="row">
+                                        <div class="col-md-8 mx-auto">
+                                            <div class="card border border-light">
+                                                <div class="card-header bg-light-primary text-center">
+                                                    <h6 class="mb-0 text-primary">Bagan Struktur Organisasi Pemerintah
+                                                        Desa</h6>
+                                                </div>
+                                                <div class="card-body text-center">
+                                                    <div class="mb-4 border rounded p-3 bg-light">
+                                                        <i class="ti ti-photo text-muted" style="font-size: 64px;"></i>
+                                                        <p class="mt-2 text-muted">Belum ada gambar struktur organisasi
+                                                            yang diunggah.</p>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label-desa text-start w-100">Upload Gambar
+                                                            Baru <span class="text-danger">*</span></label>
+                                                        <input type="file" class="form-control" accept="image/*" />
+                                                        <div class="form-text text-start mt-1">Gunakan gambar resolusi
+                                                            tinggi (min. lebar 1200px) agar mudah dibaca oleh warga.
+                                                            Format: JPG, PNG. Maks. 5MB.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="pc-footer">
+        <div class="footer-wrapper container-fluid">
+            <div class="row">
+                <div class="col-sm-6 my-1">
+                    <p class="m-0 text-muted" style="font-size:0.82rem;">&copy; 2026 Sistem Informasi Desa Sukorejo</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core JS -->
+    <script src="../assets/js/plugins/popper.min.js"></script>
+    <script src="../assets/js/plugins/simplebar.min.js"></script>
+    <script src="../assets/js/plugins/bootstrap.min.js"></script>
+    <script src="../assets/js/fonts/custom-font.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/plugins/feather.min.js"></script>
+
+
+
+    <!-- CKEditor CDN -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+
+    <!-- Page Specific JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var editors = document.querySelectorAll('.ckeditor-classic');
+            editors.forEach(function (el) {
+                ClassicEditor
+                    .create(el)
+                    .catch(error => {
+                        console.error(error);
+                    });
+            });
+        });
+    </script>
+
+    <!-- Layout Init -->
+    <script>layout_change('light'); layout_caption_change('true'); layout_rtl_change('false'); preset_change('preset-1');</script>
+</body>
+
+</html>

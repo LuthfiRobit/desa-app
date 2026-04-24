@@ -1,0 +1,282 @@
+/**
+ * Desa Sukorejo — Admin Panel Custom CSS
+ * Tema: Hijau Alam (Earthy Green)
+ * Warna Utama: #2e7d32 (Hijau Desa)
+ * Warna Sekunder: #5d4037 (Coklat Tanah)
+ */
+
+/* =====================================================
+   1. CSS VARIABLES — TEMA DESA SUKOREJO
+   ===================================================== */
+:root {
+  --desa-primary:       #2e7d32;
+  --desa-primary-light: #4caf50;
+  --desa-primary-dark:  #1b5e20;
+  --desa-primary-rgb:   46, 125, 50;
+
+  --desa-secondary:     #5d4037;
+  --desa-secondary-rgb: 93, 64, 55;
+
+  --desa-accent:        #f9a825;   /* Kuning Padi */
+  --desa-accent-rgb:    249, 168, 37;
+
+  --desa-bg-soft:       #f1f8e9;   /* Hijau sangat muda */
+  --desa-text-muted:    #6b7280;
+
+  /* Override Bootstrap primary ke hijau desa */
+  --bs-primary:         #2e7d32;
+  --bs-primary-rgb:     46, 125, 50;
+  --bs-secondary:       #5d4037;
+  --bs-secondary-rgb:   93, 64, 55;
+}
+
+/* =====================================================
+   2. BUTTON OVERRIDES
+   ===================================================== */
+.btn-primary {
+  background-color: var(--desa-primary);
+  border-color: var(--desa-primary);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--desa-primary-dark);
+  border-color: var(--desa-primary-dark);
+}
+.btn-secondary {
+  background-color: var(--desa-secondary);
+  border-color: var(--desa-secondary);
+}
+.btn-outline-primary {
+  color: var(--desa-primary);
+  border-color: var(--desa-primary);
+}
+.btn-outline-primary:hover {
+  background-color: var(--desa-primary);
+  border-color: var(--desa-primary);
+}
+
+/* =====================================================
+   3. TEXT & BG COLOR OVERRIDES
+   ===================================================== */
+.text-primary  { color: var(--desa-primary) !important; }
+.bg-primary    { background-color: var(--desa-primary) !important; }
+.border-primary{ border-color: var(--desa-primary) !important; }
+
+.text-accent   { color: var(--desa-accent) !important; }
+.bg-accent     { background-color: var(--desa-accent) !important; }
+
+.bg-light-primary {
+  background-color: rgba(var(--desa-primary-rgb), 0.12) !important;
+}
+
+/* =====================================================
+   4. SIDEBAR — TEMA DESA
+   ===================================================== */
+.pc-sidebar .pc-navbar > .pc-item.active > .pc-link,
+.pc-sidebar .pc-navbar > .pc-item:focus  > .pc-link,
+.pc-sidebar .pc-navbar > .pc-item:hover  > .pc-link {
+  color: var(--desa-primary);
+  background: rgba(var(--desa-primary-rgb), 0.10);
+}
+.pc-sidebar .pc-navbar > .pc-item.active > .pc-link .pc-micon,
+.pc-sidebar .pc-navbar > .pc-item:focus  > .pc-link .pc-micon,
+.pc-sidebar .pc-navbar > .pc-item:hover  > .pc-link .pc-micon {
+  color: var(--desa-primary);
+}
+/* Branding sidebar */
+.b-brand .desa-brand-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--desa-primary);
+  line-height: 1.2;
+}
+.b-brand .desa-brand-sub {
+  font-size: 0.72rem;
+  color: var(--desa-text-muted);
+  letter-spacing: 0.04em;
+}
+
+/* =====================================================
+   5. DASHBOARD STAT CARDS
+   ===================================================== */
+.dashnum-card.card-desa-primary { background-color: var(--desa-primary) !important; }
+.dashnum-card.card-desa-success { background-color: #388e3c !important; }
+.dashnum-card.card-desa-accent  { background-color: var(--desa-accent)  !important; }
+.dashnum-card.card-desa-info    { background-color: #0288d1 !important; }
+
+/* =====================================================
+   6. BADGE STATUS ARTIKEL / KONTEN
+   ===================================================== */
+.badge-published {
+  background-color: rgba(var(--desa-primary-rgb), 0.15);
+  color: var(--desa-primary);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.badge-draft {
+  background-color: rgba(100, 100, 100, 0.12);
+  color: #616161;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.badge-active {
+  background-color: rgba(var(--desa-primary-rgb), 0.15);
+  color: var(--desa-primary);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.badge-inactive {
+  background-color: rgba(211, 47, 47, 0.12);
+  color: #c62828;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* =====================================================
+   7. APBDES PROGRESS BAR
+   ===================================================== */
+.apbdes-progress {
+  height: 8px;
+  border-radius: 4px;
+  background-color: #e8f5e9;
+  margin-top: 4px;
+}
+.apbdes-progress .apbdes-progress-bar {
+  background-color: var(--desa-primary);
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+.apbdes-progress-bar.over-budget {
+  background-color: #e53935;
+}
+
+/* Rupiah badge */
+.rupiah-badge {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--desa-secondary);
+}
+
+/* =====================================================
+   8. FILE FORMAT ICON COLORS (Dokumen)
+   ===================================================== */
+.icon-pdf   { color: #d32f2f; }
+.icon-word  { color: #1565c0; }
+.icon-excel { color: #2e7d32; }
+
+/* =====================================================
+   9. GALLERY CARD
+   ===================================================== */
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.gallery-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.gallery-card:hover img {
+  transform: scale(1.06);
+}
+.gallery-card .gallery-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.65));
+  padding: 12px 14px 10px;
+  color: #fff;
+}
+.gallery-card .gallery-overlay h6 {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.gallery-card .gallery-overlay small {
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+.gallery-card .gallery-actions {
+  position: absolute;
+  top: 8px; right: 8px;
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.gallery-card:hover .gallery-actions { opacity: 1; }
+
+/* =====================================================
+   10. FORM ENHANCEMENTS
+   ===================================================== */
+.form-label-desa {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #374151;
+  margin-bottom: 4px;
+}
+.form-text-hint {
+  font-size: 0.78rem;
+  color: var(--desa-text-muted);
+  margin-top: 3px;
+}
+/* Upload file zone */
+.upload-zone {
+  border: 2px dashed #a5d6a7;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  background: var(--desa-bg-soft);
+  transition: border-color 0.2s ease;
+  cursor: pointer;
+}
+.upload-zone:hover {
+  border-color: var(--desa-primary);
+}
+.upload-zone .upload-icon {
+  font-size: 2rem;
+  color: var(--desa-primary);
+}
+
+/* =====================================================
+   11. PAGE HEADER (Breadcrumb area)
+   ===================================================== */
+.page-header-desa {
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e8f5e9;
+}
+.page-header-desa h4 {
+  font-weight: 700;
+  color: var(--desa-primary-dark);
+  margin: 0;
+}
+
+/* =====================================================
+   12. MISC UTILITIES
+   ===================================================== */
+.buy-now-badge { display: none !important; }
+
+.table-img-thumb {
+  width: 54px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.slug-preview {
+  font-size: 0.8rem;
+  color: var(--desa-text-muted);
+  font-family: monospace;
+  background: #f3f4f6;
+  padding: 2px 8px;
+  border-radius: 4px;
+}

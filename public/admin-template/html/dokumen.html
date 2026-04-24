@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <title>Pusat Unduhan | Admin Desa Sukorejo</title>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" id="main-font-link" />
+    <link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css" />
+    <link rel="stylesheet" href="../assets/fonts/feather.css" />
+    <link rel="stylesheet" href="../assets/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="../assets/fonts/material.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" id="main-style-link" />
+    <link rel="stylesheet" href="../assets/css/style-preset.css" />
+    <link rel="stylesheet" href="../assets/css/custom-style.css" />
+</head>
+<body>
+<div class="loader-bg"><div class="loader-track"><div class="loader-fill"></div></div></div>
+
+<nav class="pc-sidebar">
+    <div class="navbar-wrapper">
+        <div class="m-header">
+            <a href="index.html" class="b-brand text-primary">
+                <div class="d-flex align-items-center gap-2">
+                    <div style="width:36px;height:36px;background:linear-gradient(135deg,#2e7d32,#66bb6a);border-radius:8px;display:flex;align-items:center;justify-content:center;"><i class="ti ti-building-community text-white" style="font-size:20px;"></i></div>
+                    <div><div class="desa-brand-text">Desa Sukorejo</div><div class="desa-brand-sub">Panel Administrasi</div></div>
+                </div>
+            </a>
+        </div>
+        <div class="navbar-content"><ul class="pc-navbar">
+            <li class="pc-item pc-caption"><label>Beranda</label></li>
+            <li class="pc-item"><a href="index.html" class="pc-link"><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Dashboard</span></a></li>
+            <li class="pc-item pc-caption"><label>Manajemen Konten</label></li>
+            <li class="pc-item"><a href="slider.html" class="pc-link"><span class="pc-micon"><i class="ti ti-photo"></i></span><span class="pc-mtext">Slider Beranda</span></a></li>
+            <li class="pc-item"><a href="kategori-berita.html" class="pc-link"><span class="pc-micon"><i class="ti ti-tag"></i></span><span class="pc-mtext">Kategori Berita</span></a></li>
+            <li class="pc-item"><a href="berita.html" class="pc-link"><span class="pc-micon"><i class="ti ti-news"></i></span><span class="pc-mtext">Berita / Artikel</span></a></li>
+            <li class="pc-item"><a href="agenda.html" class="pc-link"><span class="pc-micon"><i class="ti ti-calendar-event"></i></span><span class="pc-mtext">Agenda Desa</span></a></li>
+            <li class="pc-item"><a href="galeri.html" class="pc-link"><span class="pc-micon"><i class="ti ti-camera"></i></span><span class="pc-mtext">Galeri Kegiatan</span></a></li>
+            <li class="pc-item pc-caption"><label>Layanan Publik</label></li>
+            <li class="pc-item"><a href="kategori-dokumen.html" class="pc-link"><span class="pc-micon"><i class="ti ti-folder"></i></span><span class="pc-mtext">Kategori Dokumen</span></a></li>
+            <li class="pc-item active"><a href="dokumen.html" class="pc-link"><span class="pc-micon"><i class="ti ti-file-description"></i></span><span class="pc-mtext">Pusat Unduhan</span></a></li>
+            <li class="pc-item pc-caption"><label>Keuangan &amp; Transparansi</label></li>
+            <li class="pc-item"><a href="apbdes.html" class="pc-link"><span class="pc-micon"><i class="ti ti-cash"></i></span><span class="pc-mtext">Data APBDes</span></a></li>
+            <li class="pc-item pc-caption"><label>Pengaturan Sistem</label></li>
+            <li class="pc-item"><a href="profil-desa.html" class="pc-link"><span class="pc-micon"><i class="ti ti-building-community"></i></span><span class="pc-mtext">Profil &amp; Info Desa</span></a></li>
+            <li class="pc-item"><a href="user-mgmt.html" class="pc-link"><span class="pc-micon"><i class="ti ti-users"></i></span><span class="pc-mtext">Manajemen Pengguna</span></a></li>
+            <li class="pc-item pc-caption"><label>Akun</label></li>
+            <li class="pc-item"><a href="profil.html" class="pc-link"><span class="pc-micon"><i class="ti ti-user"></i></span><span class="pc-mtext">Profil Saya</span></a></li>
+        </ul></div>
+    </div>
+</nav>
+
+<header class="pc-header"><div class="header-wrapper">
+    <div class="me-auto pc-mob-drp"><ul class="list-unstyled">
+        <li class="pc-h-item header-mobile-collapse"><a href="#" class="pc-head-link head-link-secondary ms-0" id="sidebar-hide"><i class="ti ti-menu-2"></i></a></li>
+        <li class="pc-h-item pc-sidebar-popup"><a href="#" class="pc-head-link head-link-secondary ms-0" id="mobile-collapse"><i class="ti ti-menu-2"></i></a></li>
+    </ul></div>
+    <div class="ms-auto"><ul class="list-unstyled">
+        <li class="dropdown pc-h-item header-user-profile">
+            <a class="pc-head-link head-link-primary dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button">
+                <img src="../assets/images/user/avatar-2.jpg" alt="Admin" class="user-avtar" />
+            </a>
+            <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown"><div class="dropdown-header">
+                <h4>Halo, <span class="small text-muted">Admin Desa</span></h4><hr />
+                <a href="profil.html" class="dropdown-item"><i class="ti ti-user"></i> Profil Saya</a>
+                <a href="login.html" class="dropdown-item"><i class="ti ti-logout"></i> Logout</a>
+            </div></div>
+        </li>
+    </ul></div>
+</div></header>
+
+<div class="pc-container"><div class="pc-content">
+
+    <div class="page-header-desa mb-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h4><i class="ti ti-file-description me-2"></i>Pusat Unduhan</h4>
+                <nav aria-label="breadcrumb"><ol class="breadcrumb mb-0" style="font-size:0.83rem;">
+                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                    <li class="breadcrumb-item">Layanan Publik</li>
+                    <li class="breadcrumb-item active">Pusat Unduhan</li>
+                </ol></nav>
+            </div>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDokumen">
+                <i class="ti ti-upload me-1"></i>Upload Dokumen
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <div class="d-flex flex-wrap gap-2 align-items-center">
+                <div class="input-group" style="max-width:240px;">
+                    <span class="input-group-text"><i class="ti ti-search"></i></span>
+                    <input type="text" class="form-control" id="searchDokumen" placeholder="Cari nama dokumen..." />
+                </div>
+                <select class="form-select" style="width:220px;" id="filterKatDokumen">
+                    <option value="">Semua Kategori</option>
+                    <option>Form Layanan Administrasi</option>
+                    <option>Peraturan &amp; Keputusan Desa</option>
+                    <option>Laporan Keuangan Desa</option>
+                    <option>Profil &amp; Data Desa</option>
+                </select>
+            </div>
+            <small class="text-muted">Total: 7 dokumen</small>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0" id="tabelDokumen">
+                    <thead class="table-light">
+                        <tr>
+                            <th style="width:50px;">Format</th>
+                            <th>Nama Dokumen</th>
+                            <th style="width:190px;">Kategori</th>
+                            <th style="width:90px;">Ukuran</th>
+                            <th style="width:120px;">Tgl. Update</th>
+                            <th style="width:140px;">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center"><i class="ti ti-file-type-pdf icon-pdf" style="font-size:24px;"></i></td>
+                            <td>
+                                <strong>Form Permohonan Surat Keterangan Domisili</strong>
+                                <div class="text-muted" style="font-size:0.78rem;">Formulir untuk warga yang membutuhkan SKD</div>
+                            </td>
+                            <td><span class="badge bg-light-primary text-primary">Form Layanan Administrasi</span></td>
+                            <td><small class="rupiah-badge">124 KB</small></td>
+                            <td><small>20 Apr 2026</small></td>
+                            <td>
+                                <div class="d-flex gap-1">
+                                    <a href="#" class="btn btn-icon btn-light-success btn-sm" title="Download"><i class="ti ti-download"></i></a>
+                                    <button class="btn btn-icon btn-light-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalDokumen" title="Edit"><i class="ti ti-edit"></i></button>
+                                    <button class="btn btn-icon btn-light-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalHapusDokumen" title="Hapus"><i class="ti ti-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><i class="ti ti-file-type-pdf icon-pdf" style="font-size:24px;"></i></td>
+                            <td>
+                                <strong>Form Permohonan Surat Keterangan Tidak Mampu</strong>
+                                <div class="text-muted" style="font-size:0.78rem;">Formulir SKTM untuk keperluan administrasi</div>
+                            </td>
+                            <td><span class="badge bg-light-primary text-primary">Form Layanan Administrasi</span></td>
+                            <td><small class="rupiah-badge">98 KB</small></td>
+                            <td><small>18 Apr 2026</small></td>
+                            <td>
+                                <div class="d-flex gap-1">
+                                    <a href="#" class="btn btn-icon btn-light-success btn-sm" title="Download"><i class="ti ti-download"></i></a>
+                                    <button class="btn btn-icon btn-light-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalDokumen" title="Edit"><i class="ti ti-edit"></i></button>
+                                    <button class="btn btn-icon btn-light-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalHapusDokumen" title="Hapus"><i class="ti ti-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><i class="ti ti-file-type-doc icon-word" style="font-size:24px;"></i></td>
+                            <td>
+                                <strong>Form Surat Pengantar KTP / KK</strong>
+                                <div class="text-muted" style="font-size:0.78rem;">Surat pengantar untuk pengurusan dokumen kependudukan</div>
+                            </td>
+                            <td><span class="badge bg-light-primary text-primary">Form Layanan Administrasi</span></td>
+                            <td><small class="rupiah-badge">56 KB</small></td>
+                            <td><small>15 Apr 2026</small></td>
+                            <td>
+                                <div class="d-flex gap-1">
+                                    <a href="#" class="btn btn-icon btn-light-success btn-sm" title="Download"><i class="ti ti-download"></i></a>
+                                    <button class="btn btn-icon btn-light-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalDokumen" title="Edit"><i class="ti ti-edit"></i></button>
+                                    <button class="btn btn-icon btn-light-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalHapusDokumen" title="Hapus"><i class="ti ti-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><i class="ti ti-file-type-pdf icon-pdf" style="font-size:24px;"></i></td>
+                            <td>
+                                <strong>Peraturan Desa No. 2 Tahun 2025 tentang APBDes</strong>
+                                <div class="text-muted" style="font-size:0.78rem;">Dokumen resmi peraturan anggaran desa</div>
+                            </td>
+                            <td><span class="badge bg-light-success text-success">Peraturan &amp; Keputusan Desa</span></td>
+                            <td><small class="rupiah-badge">342 KB</small></td>
+                            <td><small>10 Jan 2026</small></td>
+                            <td>
+                                <div class="d-flex gap-1">
+                                    <a href="#" class="btn btn-icon btn-light-success btn-sm" title="Download"><i class="ti ti-download"></i></a>
+                                    <button class="btn btn-icon btn-light-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalDokumen" title="Edit"><i class="ti ti-edit"></i></button>
+                                    <button class="btn btn-icon btn-light-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalHapusDokumen" title="Hapus"><i class="ti ti-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><i class="ti ti-file-spreadsheet icon-excel" style="font-size:24px;"></i></td>
+                            <td>
+                                <strong>Laporan Realisasi APBDes Triwulan I 2026</strong>
+                                <div class="text-muted" style="font-size:0.78rem;">Realisasi anggaran periode Januari–Maret 2026</div>
+                            </td>
+                            <td><span class="badge bg-light-warning text-warning">Laporan Keuangan Desa</span></td>
+                            <td><small class="rupiah-badge">218 KB</small></td>
+                            <td><small>05 Apr 2026</small></td>
+                            <td>
+                                <div class="d-flex gap-1">
+                                    <a href="#" class="btn btn-icon btn-light-success btn-sm" title="Download"><i class="ti ti-download"></i></a>
+                                    <button class="btn btn-icon btn-light-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalDokumen" title="Edit"><i class="ti ti-edit"></i></button>
+                                    <button class="btn btn-icon btn-light-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalHapusDokumen" title="Hapus"><i class="ti ti-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><i class="ti ti-file-type-pdf icon-pdf" style="font-size:24px;"></i></td>
+                            <td>
+                                <strong>Profil Desa Sukorejo 2026</strong>
+                                <div class="text-muted" style="font-size:0.78rem;">Dokumen profil lengkap Desa Sukorejo</div>
+                            </td>
+                            <td><span class="badge bg-light-info text-info">Profil &amp; Data Desa</span></td>
+                            <td><small class="rupiah-badge">1.2 MB</small></td>
+                            <td><small>01 Jan 2026</small></td>
+                            <td>
+                                <div class="d-flex gap-1">
+                                    <a href="#" class="btn btn-icon btn-light-success btn-sm" title="Download"><i class="ti ti-download"></i></a>
+                                    <button class="btn btn-icon btn-light-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalDokumen" title="Edit"><i class="ti ti-edit"></i></button>
+                                    <button class="btn btn-icon btn-light-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalHapusDokumen" title="Hapus"><i class="ti ti-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><i class="ti ti-file-type-doc icon-word" style="font-size:24px;"></i></td>
+                            <td>
+                                <strong>Form Izin Keramaian / Hiburan</strong>
+                                <div class="text-muted" style="font-size:0.78rem;">Surat permohonan izin kegiatan hiburan di desa</div>
+                            </td>
+                            <td><span class="badge bg-light-primary text-primary">Form Layanan Administrasi</span></td>
+                            <td><small class="rupiah-badge">48 KB</small></td>
+                            <td><small>12 Mar 2026</small></td>
+                            <td>
+                                <div class="d-flex gap-1">
+                                    <a href="#" class="btn btn-icon btn-light-success btn-sm" title="Download"><i class="ti ti-download"></i></a>
+                                    <button class="btn btn-icon btn-light-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalDokumen" title="Edit"><i class="ti ti-edit"></i></button>
+                                    <button class="btn btn-icon btn-light-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalHapusDokumen" title="Hapus"><i class="ti ti-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div></div>
+
+<!-- Modal Upload Dokumen -->
+<div class="modal fade" id="modalDokumen" tabindex="-1" aria-labelledby="modalDokumenLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalDokumenLabel"><i class="ti ti-upload me-2 text-primary"></i>Upload / Edit Dokumen</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label-desa">Judul / Nama Dokumen <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="judulDokumen" placeholder="Contoh: Form Permohonan Surat Keterangan Domisili" />
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label-desa">Kategori Dokumen <span class="text-danger">*</span></label>
+                        <select class="form-select" id="kategoriDokumen">
+                            <option value="">-- Pilih Kategori --</option>
+                            <option>Form Layanan Administrasi</option>
+                            <option>Peraturan &amp; Keputusan Desa</option>
+                            <option>Laporan Keuangan Desa</option>
+                            <option>Profil &amp; Data Desa</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label-desa">File Dokumen <span class="text-danger">*</span></label>
+                        <input type="file" class="form-control" id="fileDokumen" accept=".pdf,.doc,.docx,.xls,.xlsx" />
+                        <p class="form-text-hint mt-1">Format: PDF, DOC, DOCX, XLS, XLSX — Maks. 10MB</p>
+                    </div>
+                </div>
+                <div class="mb-1">
+                    <label class="form-label-desa">Deskripsi Singkat <span class="text-muted fw-normal">(opsional)</span></label>
+                    <textarea class="form-control" id="deskripsiDokumen" rows="2" placeholder="Jelaskan isi atau kegunaan dokumen ini bagi warga..."></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-primary"><i class="ti ti-device-floppy me-1"></i>Simpan</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Hapus Dokumen -->
+<div class="modal fade" id="modalHapusDokumen" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title text-danger"><i class="ti ti-alert-triangle me-2"></i>Hapus Dokumen</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center py-1">
+                <p>Hapus dokumen ini? File yang sudah diunggah juga akan dihapus dari server.</p>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-danger"><i class="ti ti-trash me-1"></i>Ya, Hapus</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="pc-footer"><div class="footer-wrapper container-fluid"><div class="row">
+    <div class="col-sm-6 my-1"><p class="m-0 text-muted" style="font-size:0.82rem;">&copy; 2026 Sistem Informasi Desa Sukorejo</p></div>
+</div></div></footer>
+
+<script src="../assets/js/plugins/popper.min.js"></script>
+<script src="../assets/js/plugins/simplebar.min.js"></script>
+<script src="../assets/js/plugins/bootstrap.min.js"></script>
+<script src="../assets/js/fonts/custom-font.js"></script>
+<script src="../assets/js/script.js"></script>
+<script src="../assets/js/theme.js"></script>
+<script src="../assets/js/plugins/feather.min.js"></script>
+<script>
+    document.getElementById('searchDokumen').addEventListener('input', function () {
+        var q = this.value.toLowerCase();
+        document.querySelectorAll('#tabelDokumen tbody tr').forEach(function (row) {
+            row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
+        });
+    });
+    document.getElementById('filterKatDokumen').addEventListener('change', function () {
+        var q = this.value.toLowerCase();
+        document.querySelectorAll('#tabelDokumen tbody tr').forEach(function (row) {
+            row.style.display = (!q || row.textContent.toLowerCase().includes(q)) ? '' : 'none';
+        });
+    });
+</script>
+<script>layout_change('light');layout_caption_change('true');layout_rtl_change('false');preset_change('preset-1');</script>
+</body>
+</html>

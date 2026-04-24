@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <title>Berita / Artikel | Admin Desa Sukorejo</title>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" id="main-font-link" />
+    <link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css" />
+    <link rel="stylesheet" href="../assets/fonts/feather.css" />
+    <link rel="stylesheet" href="../assets/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="../assets/fonts/material.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" id="main-style-link" />
+    <link rel="stylesheet" href="../assets/css/style-preset.css" />
+    <link rel="stylesheet" href="../assets/css/custom-style.css" />
+</head>
+<body>
+    <div class="loader-bg"><div class="loader-track"><div class="loader-fill"></div></div></div>
+
+    <!-- Sidebar -->
+    <nav class="pc-sidebar">
+        <div class="navbar-wrapper">
+            <div class="m-header">
+                <a href="index.html" class="b-brand text-primary">
+                    <div class="d-flex align-items-center gap-2">
+                        <div style="width:36px;height:36px;background:linear-gradient(135deg,#2e7d32,#66bb6a);border-radius:8px;display:flex;align-items:center;justify-content:center;"><i class="ti ti-building-community text-white" style="font-size:20px;"></i></div>
+                        <div><div class="desa-brand-text">Desa Sukorejo</div><div class="desa-brand-sub">Panel Administrasi</div></div>
+                    </div>
+                </a>
+            </div>
+            <div class="navbar-content"><ul class="pc-navbar">
+                <li class="pc-item pc-caption"><label>Beranda</label></li>
+                <li class="pc-item"><a href="index.html" class="pc-link"><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Dashboard</span></a></li>
+                <li class="pc-item pc-caption"><label>Manajemen Konten</label></li>
+                <li class="pc-item"><a href="slider.html" class="pc-link"><span class="pc-micon"><i class="ti ti-photo"></i></span><span class="pc-mtext">Slider Beranda</span></a></li>
+                <li class="pc-item"><a href="kategori-berita.html" class="pc-link"><span class="pc-micon"><i class="ti ti-tag"></i></span><span class="pc-mtext">Kategori Berita</span></a></li>
+                <li class="pc-item active"><a href="berita.html" class="pc-link"><span class="pc-micon"><i class="ti ti-news"></i></span><span class="pc-mtext">Berita / Artikel</span></a></li>
+                <li class="pc-item"><a href="agenda.html" class="pc-link"><span class="pc-micon"><i class="ti ti-calendar-event"></i></span><span class="pc-mtext">Agenda Desa</span></a></li>
+                <li class="pc-item"><a href="galeri.html" class="pc-link"><span class="pc-micon"><i class="ti ti-camera"></i></span><span class="pc-mtext">Galeri Kegiatan</span></a></li>
+                <li class="pc-item pc-caption"><label>Layanan Publik</label></li>
+                <li class="pc-item"><a href="kategori-dokumen.html" class="pc-link"><span class="pc-micon"><i class="ti ti-folder"></i></span><span class="pc-mtext">Kategori Dokumen</span></a></li>
+                <li class="pc-item"><a href="dokumen.html" class="pc-link"><span class="pc-micon"><i class="ti ti-file-description"></i></span><span class="pc-mtext">Pusat Unduhan</span></a></li>
+                <li class="pc-item pc-caption"><label>Keuangan &amp; Transparansi</label></li>
+                <li class="pc-item"><a href="apbdes.html" class="pc-link"><span class="pc-micon"><i class="ti ti-cash"></i></span><span class="pc-mtext">Data APBDes</span></a></li>
+                <li class="pc-item pc-caption"><label>Pengaturan Sistem</label></li>
+                <li class="pc-item"><a href="profil-desa.html" class="pc-link"><span class="pc-micon"><i class="ti ti-building-community"></i></span><span class="pc-mtext">Profil &amp; Info Desa</span></a></li>
+                <li class="pc-item"><a href="user-mgmt.html" class="pc-link"><span class="pc-micon"><i class="ti ti-users"></i></span><span class="pc-mtext">Manajemen Pengguna</span></a></li>
+                <li class="pc-item pc-caption"><label>Akun</label></li>
+                <li class="pc-item"><a href="profil.html" class="pc-link"><span class="pc-micon"><i class="ti ti-user"></i></span><span class="pc-mtext">Profil Saya</span></a></li>
+            </ul></div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pc-header"><div class="header-wrapper">
+        <div class="me-auto pc-mob-drp"><ul class="list-unstyled">
+            <li class="pc-h-item header-mobile-collapse"><a href="#" class="pc-head-link head-link-secondary ms-0" id="sidebar-hide"><i class="ti ti-menu-2"></i></a></li>
+            <li class="pc-h-item pc-sidebar-popup"><a href="#" class="pc-head-link head-link-secondary ms-0" id="mobile-collapse"><i class="ti ti-menu-2"></i></a></li>
+        </ul></div>
+        <div class="ms-auto"><ul class="list-unstyled">
+            <li class="dropdown pc-h-item header-user-profile">
+                <a class="pc-head-link head-link-primary dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button">
+                    <img src="../assets/images/user/avatar-2.jpg" alt="Admin" class="user-avtar" />
+                </a>
+                <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown"><div class="dropdown-header">
+                    <h4>Halo, <span class="small text-muted">Admin Desa</span></h4><hr />
+                    <a href="profil.html" class="dropdown-item"><i class="ti ti-user"></i> Profil Saya</a>
+                    <a href="login.html" class="dropdown-item"><i class="ti ti-logout"></i> Logout</a>
+                </div></div>
+            </li>
+        </ul></div>
+    </div></header>
+
+    <!-- Main Content -->
+    <div class="pc-container"><div class="pc-content">
+
+        <div class="page-header-desa mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h4><i class="ti ti-news me-2"></i>Berita / Artikel</h4>
+                    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-0" style="font-size:0.83rem;">
+                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item">Manajemen Konten</li>
+                        <li class="breadcrumb-item active">Berita / Artikel</li>
+                    </ol></nav>
+                </div>
+                <a href="berita-form.html" class="btn btn-primary">
+                    <i class="ti ti-pencil-plus me-1"></i>Tulis Berita Baru
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header d-flex flex-wrap justify-content-between align-items-center gap-2">
+                <div class="d-flex flex-wrap gap-2 align-items-center">
+                    <div class="input-group" style="max-width:240px;">
+                        <span class="input-group-text"><i class="ti ti-search"></i></span>
+                        <input type="text" class="form-control" id="searchBerita" placeholder="Cari judul berita..." />
+                    </div>
+                    <select class="form-select" style="width:160px;" id="filterKategoriBerita">
+                        <option value="">Semua Kategori</option>
+                        <option>Pemerintahan</option>
+                        <option>Pembangunan</option>
+                        <option>Kesehatan</option>
+                        <option>Sosial &amp; Budaya</option>
+                        <option>Pengumuman</option>
+                    </select>
+                    <select class="form-select" style="width:140px;" id="filterStatusBerita">
+                        <option value="">Semua Status</option>
+                        <option value="published">Published</option>
+                        <option value="draft">Draft</option>
+                    </select>
+                </div>
+                <small class="text-muted">Total: 6 artikel</small>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th style="width:70px;">Thumb</th>
+                                <th>Judul &amp; Kategori</th>
+                                <th style="width:120px;">Penulis</th>
+                                <th style="width:120px;">Tgl. Terbit</th>
+                                <th style="width:110px;">Status</th>
+                                <th style="width:130px;">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="../assets/images/user/avatar-1.jpg" alt="" class="table-img-thumb" /></td>
+                                <td>
+                                    <strong>Musyawarah Desa Penetapan RKPDes 2027</strong>
+                                    <div><span class="badge bg-light-info text-info" style="font-size:0.75rem;">Pemerintahan</span></div>
+                                </td>
+                                <td><small>Admin Desa</small></td>
+                                <td><small>22 Apr 2026</small></td>
+                                <td><span class="badge-published">Published</span></td>
+                                <td>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="btn btn-icon btn-light-info btn-sm" title="Preview"><i class="ti ti-eye"></i></a>
+                                        <a href="berita-form.html" class="btn btn-icon btn-light-primary btn-sm" title="Edit"><i class="ti ti-edit"></i></a>
+                                        <button class="btn btn-icon btn-light-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalHapusBerita" title="Hapus"><i class="ti ti-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="../assets/images/user/avatar-2.jpg" alt="" class="table-img-thumb" /></td>
+                                <td>
+                                    <strong>Panen Raya Padi Dusun Sumber Agung</strong>
+                                    <div><span class="badge bg-light-success text-success" style="font-size:0.75rem;">Pembangunan</span></div>
+                                </td>
+                                <td><small>Operator Desa</small></td>
+                                <td><small>— (Draft)</small></td>
+                                <td><span class="badge-draft">Draft</span></td>
+                                <td>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="btn btn-icon btn-light-info btn-sm" title="Preview"><i class="ti ti-eye"></i></a>
+                                        <a href="berita-form.html" class="btn btn-icon btn-light-primary btn-sm" title="Edit"><i class="ti ti-edit"></i></a>
+                                        <button class="btn btn-icon btn-light-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalHapusBerita" title="Hapus"><i class="ti ti-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="../assets/images/user/avatar-3.jpg" alt="" class="table-img-thumb" /></td>
+                                <td>
+                                    <strong>Posyandu Balita Dusun Krajan April 2026</strong>
+                                    <div><span class="badge bg-light-danger text-danger" style="font-size:0.75rem;">Kesehatan</span></div>
+                                </td>
+                                <td><small>Admin Desa</small></td>
+                                <td><small>18 Apr 2026</small></td>
+                                <td><span class="badge-published">Published</span></td>
+                                <td>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="btn btn-icon btn-light-info btn-sm" title="Preview"><i class="ti ti-eye"></i></a>
+                                        <a href="berita-form.html" class="btn btn-icon btn-light-primary btn-sm" title="Edit"><i class="ti ti-edit"></i></a>
+                                        <button class="btn btn-icon btn-light-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalHapusBerita" title="Hapus"><i class="ti ti-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="../assets/images/user/avatar-4.jpg" alt="" class="table-img-thumb" /></td>
+                                <td>
+                                    <strong>Pengumuman Jadwal Posyandu Mei 2026</strong>
+                                    <div><span class="badge bg-light-warning text-warning" style="font-size:0.75rem;">Pengumuman</span></div>
+                                </td>
+                                <td><small>Operator Desa</small></td>
+                                <td><small>15 Apr 2026</small></td>
+                                <td><span class="badge-published">Published</span></td>
+                                <td>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="btn btn-icon btn-light-info btn-sm" title="Preview"><i class="ti ti-eye"></i></a>
+                                        <a href="berita-form.html" class="btn btn-icon btn-light-primary btn-sm" title="Edit"><i class="ti ti-edit"></i></a>
+                                        <button class="btn btn-icon btn-light-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalHapusBerita" title="Hapus"><i class="ti ti-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div></div>
+
+    <!-- Modal Hapus Berita -->
+    <div class="modal fade" id="modalHapusBerita" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-danger"><i class="ti ti-alert-triangle me-2"></i>Hapus Berita</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center py-1">
+                    <p>Apakah Anda yakin ingin menghapus berita ini secara permanen?</p>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-danger"><i class="ti ti-trash me-1"></i>Ya, Hapus</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pc-footer"><div class="footer-wrapper container-fluid"><div class="row">
+        <div class="col-sm-6 my-1"><p class="m-0 text-muted" style="font-size:0.82rem;">&copy; 2026 Sistem Informasi Desa Sukorejo</p></div>
+    </div></div></footer>
+
+    <script src="../assets/js/plugins/popper.min.js"></script>
+    <script src="../assets/js/plugins/simplebar.min.js"></script>
+    <script src="../assets/js/plugins/bootstrap.min.js"></script>
+    <script src="../assets/js/fonts/custom-font.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/plugins/feather.min.js"></script>
+    <script>layout_change('light');layout_caption_change('true');layout_rtl_change('false');preset_change('preset-1');</script>
+</body>
+</html>

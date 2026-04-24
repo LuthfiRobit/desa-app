@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <title>Login | Admin Desa Sukorejo</title>
+    <!-- [Meta] -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Panel Administrasi Website Desa Sukorejo, Kec. Kotaanyar, Kab. Probolinggo" />
+    <meta name="author" content="Desa Sukorejo" />
+
+    <!-- [Favicon] icon -->
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/x-icon" />
+    <!-- [Google Font] Family -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" id="main-font-link" />
+    <!-- [Tabler Icons] -->
+    <link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css" />
+    <!-- [Feather Icons] -->
+    <link rel="stylesheet" href="../assets/fonts/feather.css" />
+    <!-- [Font Awesome Icons] -->
+    <link rel="stylesheet" href="../assets/fonts/fontawesome.css" />
+    <!-- [Material Icons] -->
+    <link rel="stylesheet" href="../assets/fonts/material.css" />
+    <!-- [Template CSS Files] -->
+    <link rel="stylesheet" href="../assets/css/style.css" id="main-style-link" />
+    <link rel="stylesheet" href="../assets/css/style-preset.css" />
+    <!-- [Custom Desa CSS] -->
+    <link rel="stylesheet" href="../assets/css/custom-style.css" />
+
+    <style>
+        .login-desa-brand {
+            text-align: center;
+            padding: 8px 0 4px;
+        }
+        .login-desa-brand .brand-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #2e7d32, #66bb6a);
+            border-radius: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 14px rgba(46,125,50,0.35);
+        }
+        .login-desa-brand .brand-icon i {
+            font-size: 28px;
+            color: #fff;
+        }
+        .login-desa-brand h3 {
+            margin: 0;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2e7d32;
+            letter-spacing: 0.01em;
+        }
+        .login-desa-brand p {
+            margin: 2px 0 0;
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+        .auth-footer-note {
+            text-align: center;
+            font-size: 0.78rem;
+            color: #9ca3af;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<!-- [Body] Start -->
+
+<body>
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+
+    <div class="auth-main">
+        <div class="auth-wrapper v3">
+            <div class="auth-form">
+                <div class="card my-5">
+                    <div class="card-body">
+
+                        <!-- Branding Desa -->
+                        <div class="login-desa-brand">
+                            <div class="brand-icon">
+                                <i class="ti ti-building-community"></i>
+                            </div>
+                            <h3>Desa Sukorejo</h3>
+                            <p>Kec. Kotaanyar &mdash; Kab. Probolinggo</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="d-flex justify-content-center">
+                                <div class="auth-header">
+                                    <h2 class="text-secondary mt-4"><b>Selamat Datang</b></h2>
+                                    <p class="f-16 mt-1 text-center">Masuk ke Panel Administrasi Desa</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form action="index.html">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="loginEmail"
+                                    placeholder="Email admin" value="admin@sukorejo.desa.id" />
+                                <label for="loginEmail">Alamat Email</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="loginPassword"
+                                    placeholder="Password" value="password" />
+                                <label for="loginPassword">Kata Sandi</label>
+                            </div>
+                            <div class="d-flex mt-1 justify-content-between align-items-center">
+                                <div class="form-check">
+                                    <input class="form-check-input input-primary" type="checkbox"
+                                        id="rememberMe" checked="" />
+                                    <label class="form-check-label text-muted" for="rememberMe">Ingat Saya</label>
+                                </div>
+                                <a href="#" class="text-primary text-decoration-none" style="font-size:0.88rem;">Lupa Password?</a>
+                            </div>
+                            <div class="d-grid mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="ti ti-login me-1"></i> Masuk
+                                </button>
+                            </div>
+                        </form>
+
+                        <p class="auth-footer-note mt-3">
+                            &copy; 2026 Sistem Informasi Desa Sukorejo &mdash; Hak Akses Terbatas
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+    <!-- Required Js -->
+    <script src="../assets/js/plugins/popper.min.js"></script>
+    <script src="../assets/js/plugins/simplebar.min.js"></script>
+    <script src="../assets/js/plugins/bootstrap.min.js"></script>
+    <script src="../assets/js/fonts/custom-font.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/plugins/feather.min.js"></script>
+
+    <script>layout_change('light');</script>
+    <script>layout_caption_change('true');</script>
+    <script>layout_rtl_change('false');</script>
+    <script>preset_change('preset-1');</script>
+
+</body>
+<!-- [Body] end -->
+
+</html>

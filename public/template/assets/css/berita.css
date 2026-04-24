@@ -1,0 +1,29 @@
+/* Berita Specific Styles */
+.category-pill {
+    background: white;
+    color: var(--text-dark);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    margin: 0.25rem;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.category-pill:hover, .category-pill.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.pagination .page-link {
+    color: var(--primary-color);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}

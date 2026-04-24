@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparansi Keuangan - Desa Sukorejo</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/transparansi.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-landmark"></i>
+                <span>Desa Sukorejo</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html#beranda">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#layanan">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profil-desa.html">Profil Desa</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="transparansi.html">Transparansi</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sub-page Hero -->
+    <header class="sub-hero">
+        <div class="container sub-hero-content">
+            <h1>Transparansi Keuangan</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Transparansi</li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="py-5 mt-3">
+        <div class="container">
+            <div class="section-title">
+                <h2>Realisasi APBDes Tahun 2026</h2>
+                <p class="text-muted">Data per Kuartal II (Update: Juni 2026). Mewujudkan pemerintahan desa yang
+                    akuntabel.</p>
+            </div>
+
+            <!-- Summary Stats -->
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="finance-stat-card pendapatan">
+                        <div class="icon"><i class="fas fa-wallet"></i></div>
+                        <p>Total Pendapatan</p>
+                        <h3>Rp 1.450.000.000</h3>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="finance-stat-card belanja">
+                        <div class="icon"><i class="fas fa-shopping-cart"></i></div>
+                        <p>Total Belanja</p>
+                        <h3>Rp 1.125.000.000</h3>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="finance-stat-card pembiayaan">
+                        <div class="icon"><i class="fas fa-piggy-bank"></i></div>
+                        <p>Sisa Lebih Perhitungan (SiLPA)</p>
+                        <h3>Rp 325.000.000</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="row g-4 mb-5">
+                <div class="col-lg-5">
+                    <div class="chart-container d-flex flex-column">
+                        <h4 class="chart-title">Proporsi Sumber Pendapatan</h4>
+                        <div class="flex-grow-1 position-relative" style="min-height: 300px;">
+                            <canvas id="pendapatanPieChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="chart-container d-flex flex-column">
+                        <h4 class="chart-title">Realisasi Belanja per Bidang</h4>
+                        <div class="flex-grow-1 position-relative" style="min-height: 300px;">
+                            <canvas id="belanjaBarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Table Row -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="finance-table-wrapper">
+                        <h4 class="chart-title text-start mb-4">Rincian Anggaran Pendapatan dan Belanja Desa (APBDes)
+                        </h4>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Uraian / Bidang</th>
+                                        <th class="text-end">Anggaran (Rp)</th>
+                                        <th class="text-end">Realisasi (Rp)</th>
+                                        <th class="text-center" style="width: 20%;">Persentase</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-light">
+                                        <td colspan="4" class="fw-bold text-success"><i
+                                                class="fas fa-plus-circle me-2"></i>PENDAPATAN DESA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Pendapatan Asli Desa (PADes)</td>
+                                        <td class="text-end">150.000.000</td>
+                                        <td class="text-end">120.000.000</td>
+                                        <td>
+                                            <div class="d-flex justify-content-between align-items-center mb-1"><span
+                                                    class="small">80%</span></div>
+                                            <div class="progress progress-sm">
+                                                <div class="progress-bar bg-success" style="width: 80%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Dana Desa (DD)</td>
+                                        <td class="text-end">900.000.000</td>
+                                        <td class="text-end">900.000.000</td>
+                                        <td>
+                                            <div class="d-flex justify-content-between align-items-center mb-1"><span
+                                                    class="small">100%</span></div>
+                                            <div class="progress progress-sm">
+                                                <div class="progress-bar bg-success" style="width: 100%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Alokasi Dana Desa (ADD)</td>
+                                        <td class="text-end">400.000.000</td>
+                                        <td class="text-end">400.000.000</td>
+                                        <td>
+                                            <div class="d-flex justify-content-between align-items-center mb-1"><span
+                                                    class="small">100%</span></div>
+                                            <div class="progress progress-sm">
+                                                <div class="progress-bar bg-success" style="width: 100%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Bantuan Keuangan Provinsi</td>
+                                        <td class="text-end">50.000.000</td>
+                                        <td class="text-end">30.000.000</td>
+                                        <td>
+                                            <div class="d-flex justify-content-between align-items-center mb-1"><span
+                                                    class="small">60%</span></div>
+                                            <div class="progress progress-sm">
+                                                <div class="progress-bar bg-success" style="width: 60%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="table-light mt-2">
+                                        <td colspan="4" class="fw-bold text-danger"><i
+                                                class="fas fa-minus-circle me-2"></i>BELANJA DESA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Bidang Penyelenggaraan Pemerintahan</td>
+                                        <td class="text-end">400.000.000</td>
+                                        <td class="text-end">380.000.000</td>
+                                        <td>
+                                            <div class="d-flex justify-content-between align-items-center mb-1"><span
+                                                    class="small">95%</span></div>
+                                            <div class="progress progress-sm">
+                                                <div class="progress-bar bg-danger" style="width: 95%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Bidang Pembangunan Desa</td>
+                                        <td class="text-end">700.000.000</td>
+                                        <td class="text-end">450.000.000</td>
+                                        <td>
+                                            <div class="d-flex justify-content-between align-items-center mb-1"><span
+                                                    class="small">64%</span></div>
+                                            <div class="progress progress-sm">
+                                                <div class="progress-bar bg-danger" style="width: 64%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Bidang Pembinaan Kemasyarakatan</td>
+                                        <td class="text-end">150.000.000</td>
+                                        <td class="text-end">120.000.000</td>
+                                        <td>
+                                            <div class="d-flex justify-content-between align-items-center mb-1"><span
+                                                    class="small">80%</span></div>
+                                            <div class="progress progress-sm">
+                                                <div class="progress-bar bg-danger" style="width: 80%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Bidang Pemberdayaan Masyarakat</td>
+                                        <td class="text-end">200.000.000</td>
+                                        <td class="text-end">175.000.000</td>
+                                        <td>
+                                            <div class="d-flex justify-content-between align-items-center mb-1"><span
+                                                    class="small">87%</span></div>
+                                            <div class="progress progress-sm">
+                                                <div class="progress-bar bg-danger" style="width: 87%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5><i class="fas fa-landmark me-2"></i>Desa Sukorejo</h5>
+                    <p>Portal digital resmi Desa Sukorejo, Kecamatan Kotaanyar, Kabupaten Probolinggo. Memberikan pelayanan terbaik untuk masyarakat.
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Menu</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html#beranda"><i class="fas fa-chevron-right"></i>Beranda</a></li>
+                        <li><a href="profil-desa.html"><i class="fas fa-chevron-right"></i>Profil Desa</a></li>
+                        <li><a href="berita.html"><i class="fas fa-chevron-right"></i>Berita</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Layanan</h5>
+                    <ul class="footer-links">
+                        <li><a href="unduhan.html"><i class="fas fa-chevron-right"></i>Pusat Unduhan</a></li>
+                        <li><a href="transparansi.html"><i class="fas fa-chevron-right"></i>Transparansi Keuangan</a>
+                        </li>
+                        <li><a href="agenda.html"><i class="fas fa-chevron-right"></i>Agenda Desa</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Kontak Kami</h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Jl. Raya Kotaanyar, Desa Sukorejo, Kec. Kotaanyar</li>
+                        <li><i class="fas fa-phone"></i> (0335) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@sukorejo-probolinggo.desa.id</li>
+                        <li><i class="fas fa-clock"></i> Senin - Jumat: 08.00 - 15.00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom mt-4 pt-3 border-top border-secondary text-center">
+                <p class="mb-0 text-white-50">&copy; 2026 Desa Sukorejo, Probolinggo. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Chart.js Initialization -->
+    <!-- Custom Scripts -->
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/transparansi.js"></script>
+</body>
+
+</html>
