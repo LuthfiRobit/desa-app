@@ -60,6 +60,8 @@ class ArticleController extends Controller
             $imagePath = $request->file('image')->store('articles', 'public');
         }
 
+        $isPublished = $request->input('is_published') == '1';
+
         $article = Article::create([
             'user_id' => auth()->id() ?? 1, // Fallback if not logged in for now
             'category_id' => $request->category_id,
@@ -67,8 +69,8 @@ class ArticleController extends Controller
             'slug' => Str::slug($request->title),
             'content' => $request->content,
             'image_path' => $imagePath,
-            'is_published' => $request->has('is_published'),
-            'published_at' => $request->published_at ? Carbon::parse($request->published_at) : ($request->has('is_published') ? now() : null),
+            'is_published' => $isPublished,
+            'published_at' => $request->published_at ? Carbon::parse($request->published_at) : ($isPublished ? now() : null),
         ]);
 
         return redirect()->route('admin.berita.artikel.index')->with('success', 'Berita berhasil disimpan');
@@ -101,14 +103,16 @@ class ArticleController extends Controller
             $imagePath = $request->file('image')->store('articles', 'public');
         }
 
+        $isPublished = $request->input('is_published') == '1';
+
         $article->update([
             'category_id' => $request->category_id,
             'title' => $request->title,
             'slug' => Str::slug($request->title),
             'content' => $request->content,
             'image_path' => $imagePath,
-            'is_published' => $request->has('is_published'),
-            'published_at' => $request->published_at ? Carbon::parse($request->published_at) : ($request->has('is_published') ? ($article->published_at ?? now()) : null),
+            'is_published' => $isPublished,
+            'published_at' => $request->published_at ? Carbon::parse($request->published_at) : ($isPublished ? ($article->published_at ?? now()) : null),
         ]);
 
         return redirect()->route('admin.berita.artikel.index')->with('success', 'Berita berhasil diperbarui');

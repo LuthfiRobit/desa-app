@@ -105,7 +105,7 @@
                     </div>
                     <div class="card-body">
                         <div class="d-grid gap-2">
-                            <button type="submit" name="is_published" value="0" class="btn btn-light border">
+                            <button type="submit" name="is_published" value="0" class="btn btn-light border" onclick="document.getElementById('statusPublikasi').checked = false">
                                 <i class="ti ti-device-floppy me-1"></i>Simpan sebagai Draft
                             </button>
                             <button type="submit" name="is_published" value="1" class="btn btn-primary" onclick="document.getElementById('statusPublikasi').checked = true">

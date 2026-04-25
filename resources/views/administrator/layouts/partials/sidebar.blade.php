@@ -27,13 +27,8 @@
                 </li>
 
                 <!-- Manajemen Konten -->
+                @can('manage_content')
                 <li class="pc-item pc-caption"><label>Manajemen Konten</label></li>
-                <!-- <li class="pc-item">
-                    <a href="#" class="pc-link">
-                        <span class="pc-micon"><i class="ti ti-photo"></i></span>
-                        <span class="pc-mtext">Slider Beranda</span>
-                    </a>
-                </li> -->
                 <li class="pc-item {{ request()->routeIs('admin.berita.kategori.index') ? 'active' : '' }}">
                     <a href="{{ route('admin.berita.kategori.index') }}" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-tag"></i></span>
@@ -82,26 +77,31 @@
                         <span class="pc-mtext">Data APBDes</span>
                     </a>
                 </li>
+                @endcan
 
                 <!-- Pengaturan -->
                 <li class="pc-item pc-caption"><label>Pengaturan Sistem</label></li>
+                @can('manage_settings')
                 <li class="pc-item {{ request()->routeIs('admin.profildesa.index') ? 'active' : '' }}">
                     <a href="{{ route('admin.profildesa.index') }}" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-building-community"></i></span>
                         <span class="pc-mtext">Profil &amp; Info Desa</span>
                     </a>
                 </li>
-                <li class="pc-item">
-                    <a href="#" class="pc-link">
+                @endcan
+                @can('manage_users')
+                <li class="pc-item {{ request()->routeIs('admin.users.index') ? 'active' : '' }}">
+                    <a href="{{ route('admin.users.index') }}" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-users"></i></span>
                         <span class="pc-mtext">Manajemen Pengguna</span>
                     </a>
                 </li>
+                @endcan
 
                 <!-- Akun -->
                 <li class="pc-item pc-caption"><label>Akun</label></li>
-                <li class="pc-item">
-                    <a href="#" class="pc-link">
+                <li class="pc-item {{ request()->routeIs('admin.profile.index') ? 'active' : '' }}">
+                    <a href="{{ route('admin.profile.index') }}" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-user"></i></span>
                         <span class="pc-mtext">Profil Saya</span>
                     </a>

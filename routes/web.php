@@ -32,33 +32,51 @@ Route::get('/transparansi', [TransparencyController::class, 'index'])->name('tra
 Route::get('/agenda', [AgendaController::class, 'index'])->name('agenda');
 Route::get('/galeri', [GalleryController::class, 'index'])->name('gallery');
 
+use App\Http\Controllers\AuthController;
+
+// Auth Routes
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
 // Administrator Routes
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-    // Berita Group
-    Route::prefix('berita')->name('berita.')->group(function () {
-        Route::resource('kategori', CategoryController::class)->except(['create', 'show', 'edit']);
-        Route::resource('artikel', AdminArticleController::class);
+    // Manajemen Konten
+    Route::middleware(['can:manage_content'])->group(function () {
+        // Berita Group
+        Route::prefix('berita')->name('berita.')->group(function () {
+            Route::resource('kategori', CategoryController::class)->except(['create', 'show', 'edit']);
+            Route::resource('artikel', AdminArticleController::class);
+        });
+
+        Route::resource('agenda', AdminAgendaController::class)->except(['create', 'show', 'edit']);
+        Route::resource('galeri', AdminGalleryController::class)->except(['create', 'show', 'edit']);
+        
+        // Dokumen Group
+        Route::prefix('dokumen')->name('dokumen.')->group(function () {
+            Route::resource('kategori', AdminDocCategoryController::class)->except(['create', 'show', 'edit']);
+            Route::resource('pusat-unduhan', AdminDocumentController::class)->except(['create', 'show', 'edit']);
+        });
+        
+        Route::resource('apbdes', AdminApbdesController::class)->except(['create', 'show', 'edit']);
     });
 
-    Route::resource('agenda', AdminAgendaController::class)->except(['create', 'show', 'edit']);
-    Route::resource('galeri', AdminGalleryController::class)->except(['create', 'show', 'edit']);
-    
-    // Dokumen Group
-    Route::prefix('dokumen')->name('dokumen.')->group(function () {
-        Route::resource('kategori', AdminDocCategoryController::class)->except(['create', 'show', 'edit']);
-        Route::resource('pusat-unduhan', AdminDocumentController::class)->except(['create', 'show', 'edit']);
+    // Pengaturan Sistem
+    Route::middleware(['can:manage_settings'])->group(function () {
+        Route::get('profil-desa', [AdminProfileController::class, 'index'])->name('profildesa.index');
+        Route::post('profil-desa', [AdminProfileController::class, 'update'])->name('profildesa.update');
     });
-    
-    Route::resource('apbdes', AdminApbdesController::class)->except(['create', 'show', 'edit']);
-    
-    Route::get('profil-desa', [AdminProfileController::class, 'index'])->name('profildesa.index');
-    Route::post('profil-desa', [AdminProfileController::class, 'update'])->name('profildesa.update');
+
+    // User Management
+    Route::middleware(['can:manage_users'])->group(function () {
+        Route::resource('users', \App\Http\Controllers\Administrator\UserController::class)->except(['create', 'show', 'edit']);
+        Route::put('users/{user}/reset-password', [\App\Http\Controllers\Administrator\UserController::class, 'resetPassword'])->name('users.reset-password');
+    });
+
+    // My Profile Routes
+    Route::get('profil', [\App\Http\Controllers\Administrator\MyProfileController::class, 'index'])->name('profile.index');
+    Route::post('profil', [\App\Http\Controllers\Administrator\MyProfileController::class, 'update'])->name('profile.update');
+    Route::post('profil/password', [\App\Http\Controllers\Administrator\MyProfileController::class, 'updatePassword'])->name('profile.password');
 });
-
-// Auth Routes (Temporary)
-Route::post('/logout', function () {
-    auth()->logout();
-    return redirect('/');
-})->name('logout');
