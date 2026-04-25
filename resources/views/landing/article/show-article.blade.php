@@ -40,7 +40,7 @@
                             alt="{{ $article->title }}" class="article-img-main">
 
                         <div class="article-content">
-                            {!! nl2br($article->content) !!}
+                            {!! $article->content !!}
                         </div>
                     </article>
 

@@ -64,7 +64,7 @@
                             </div>
                             <div class="misi-content" style="color: var(--text-dark); line-height: 1.8;">
                                 @if($profile && $profile->mission)
-                                    {!! nl2br(e($profile->mission)) !!}
+                                    {!! $profile->mission !!}
                                 @else
                                     <ul class="list-group list-group-flush mt-3" style="border-top: none;">
                                         <li class="list-group-item d-flex align-items-start" style="border: none; padding: 0.75rem 0;">
@@ -103,7 +103,7 @@
                         Sejarah Singkat Desa {{ $profile->village_name ?? 'Sukorejo' }}</h2>
                     <div style="color: var(--text-dark); line-height: 1.8;">
                         @if($profile && $profile->history)
-                            {!! nl2br(e($profile->history)) !!}
+                            {!! $profile->history !!}
                         @else
                             <p>Desa kami telah berdiri sejak masa kemerdekaan, berawal dari sebuah perkampungan kecil yang mayoritas penduduknya berprofesi sebagai petani. Seiring berjalannya waktu, desa ini mengalami berbagai perkembangan signifikan.</p>
                         @endif

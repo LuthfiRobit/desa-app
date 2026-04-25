@@ -86,7 +86,7 @@
                                 style="color: var(--primary-color); font-size: 1.2rem; display: inline-block; margin-bottom: 1.5rem; font-weight: 600; border-bottom: 2px solid var(--accent-color); padding-bottom: 5px;">{{ $profile->head_of_village_name ?? 'H. Ahmad Santoso, S.Sos' }}</span>
                             @if(isset($profile) && $profile->head_of_village_msg)
                                 <div style="font-size: 1.05rem; line-height: 1.8; color: var(--text-dark);">
-                                    {!! nl2br(e($profile->head_of_village_msg)) !!}
+                                    {!! $profile->head_of_village_msg !!}
                                 </div>
                             @else
                                 <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-dark);">Assalamu'alaikum
@@ -206,7 +206,7 @@
                                     <span><i class="far fa-user"></i>{{ $article->user->name ?? 'Admin Desa' }}</span>
                                 </div>
                                 <h5>{{ $article->title }}</h5>
-                                <p>{{ Str::limit($article->content, 100) }}</p>
+                                <p>{{ Str::limit(strip_tags($article->content), 100) }}</p>
                                 <a href="{{ url('artikel/' . $article->slug) }}" class="btn-read-more">
                                     Baca Selengkapnya <i class="fas fa-arrow-right ms-1"></i>
                                 </a>
