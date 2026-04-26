@@ -3,7 +3,8 @@
         <div class="row g-4">
             <div class="col-lg-4">
                 <h5><i class="fas fa-landmark me-2"></i>Desa Sukorejo</h5>
-                <p>Portal digital resmi Desa Sukorejo, Kecamatan Kotaanyar, Kabupaten Probolinggo. Memberikan pelayanan terbaik untuk masyarakat.
+                <p>Portal digital resmi Desa Sukorejo, Kecamatan Kotaanyar, Kabupaten Probolinggo. Memberikan pelayanan
+                    terbaik untuk masyarakat.
                 </p>
                 <div class="social-links">
                     <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -25,7 +26,8 @@
                 <h5>Layanan</h5>
                 <ul class="footer-links">
                     <li><a href="{{ url('unduhan') }}"><i class="fas fa-chevron-right"></i>Pusat Unduhan</a></li>
-                    <li><a href="{{ url('transparansi') }}"><i class="fas fa-chevron-right"></i>Transparansi Keuangan</a>
+                    <li><a href="{{ url('transparansi') }}"><i class="fas fa-chevron-right"></i>Transparansi
+                            Keuangan</a>
                     </li>
                     <li><a href="{{ url('galeri') }}"><i class="fas fa-chevron-right"></i>Galeri Kegiatan</a></li>
                     <li><a href="{{ url('agenda') }}"><i class="fas fa-chevron-right"></i>Agenda Desa</a></li>
@@ -34,9 +36,10 @@
             <div class="col-lg-3 col-md-6">
                 <h5>Kontak Kami</h5>
                 <ul class="footer-links">
-                    <li><i class="fas fa-map-marker-alt"></i> Jl. Raya Kotaanyar, Desa Sukorejo, Kec. Kotaanyar</li>
-                    <li><i class="fas fa-phone"></i> (0335) 123-4567</li>
-                    <li><i class="fas fa-envelope"></i> info@sukorejo-probolinggo.desa.id</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Jln. Kantor Desa Sukorejo, Desa Sukorejo, Kec. Kotaanyar
+                    </li>
+                    <li><a href="https://wa.me/6281399666366" target="_blank"><i class="fas fa-phone"></i> +62 813-9966-6366</a></li>
+                    <li><a href="mailto:sukorejodesa39@gmail.com"><i class="fas fa-envelope"></i> sukorejodesa39@gmail.com</a></li>
                     <li><i class="fas fa-clock"></i> Senin - Jumat: 08.00 - 15.00</li>
                 </ul>
             </div>

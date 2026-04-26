@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 hero-illustration d-none d-lg-block">
-                    <i class="fas fa-building"></i>
+                    <i class="fas fa-landmark"></i>
                 </div>
             </div>
         </div>
