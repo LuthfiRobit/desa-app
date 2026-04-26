@@ -1,6 +1,9 @@
 @extends('landing.layouts.app')
 
-@section('title', 'Profil Desa ' . ($profile->village_name ?? 'Sukorejo') . ' - Portal Desa Digital')
+@section('title', 'Profil Desa ' . ($profile->village_name ?? 'Sukorejo') . ' - Kecamatan Kotaanyar, Kabupaten Probolinggo')
+@section('meta_description', 'Profil Lengkap Desa ' . ($profile->village_name ?? 'Sukorejo') . ', Kecamatan Kotaanyar, Kabupaten Probolinggo. Sejarah, visi misi, dan struktur organisasi pemerintahan desa.')
+@section('meta_keywords', 'profil desa sukorejo, sejarah desa sukorejo, visi misi desa sukorejo, struktur organisasi desa sukorejo, kotaanyar, probolinggo')
+
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('template/assets/css/profil-desa.css') }}">
@@ -10,7 +13,8 @@
     <!-- Sub-page Hero -->
     <header class="sub-hero">
         <div class="container sub-hero-content">
-            <h1>Profil Desa</h1>
+            <h1>Profil Desa {{ $profile->village_name ?? 'Sukorejo' }}</h1>
+
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ url('/') }}">Beranda</a></li>

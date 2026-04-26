@@ -1,6 +1,10 @@
 @extends('landing.layouts.app')
 
-@section('title', $article->title . ' - Desa Sukorejo')
+@section('title', $article->title . ' - Desa Sukorejo, Probolinggo')
+@section('meta_description', Str::limit(strip_tags($article->content), 160))
+@section('meta_keywords', 'berita desa sukorejo, ' . $article->title . ', sukorejo kotaanyar, kabar probolinggo')
+@section('og_image', !empty($article->image_path) && Storage::disk('public')->exists($article->image_path) ? asset('storage/' . $article->image_path) : 'https://placehold.co/800x450?text=' . urlencode($article->title))
+
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('template/assets/css/detail-berita.css') }}">

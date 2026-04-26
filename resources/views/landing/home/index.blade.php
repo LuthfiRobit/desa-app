@@ -1,6 +1,9 @@
 @extends('landing.layouts.app')
 
-@section('title', 'Desa Sukorejo - Portal Desa Digital')
+@section('title', 'Desa Sukorejo - Kecamatan Kotaanyar, Kabupaten Probolinggo | Portal Desa Digital')
+@section('meta_description', 'Portal resmi Desa Sukorejo, Kecamatan Kotaanyar, Kabupaten Probolinggo. Temukan informasi pelayanan, berita terbaru, transparansi APBDes, dan profil desa Sukorejo.')
+@section('meta_keywords', 'desa sukorejo, sukorejo kotaanyar, probolinggo, desa digital probolinggo, layanan desa sukorejo, profil desa sukorejo')
+
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('template/assets/css/index.css') }}">

@@ -1,6 +1,8 @@
 @extends('landing.layouts.app')
 
-@section('title', 'Transparansi Keuangan - Desa ' . ($profile->village_name ?? 'Sukorejo'))
+@section('title', 'Transparansi APBDes Desa Sukorejo - Kotaanyar, Probolinggo')
+@section('meta_description', 'Transparansi pengelolaan dana desa dan realisasi APBDes Desa Sukorejo, Kecamatan Kotaanyar, Kabupaten Probolinggo. Pantau rincian anggaran kami.')
+
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('template/assets/css/transparansi.css') }}">

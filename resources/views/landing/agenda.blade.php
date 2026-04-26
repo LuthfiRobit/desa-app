@@ -1,6 +1,8 @@
 @extends('landing.layouts.app')
 
-@section('title', 'Agenda Kegiatan - Desa Sukorejo')
+@section('title', 'Agenda Kegiatan Desa Sukorejo - Kotaanyar, Probolinggo')
+@section('meta_description', 'Jadwal kegiatan dan acara penting di Desa Sukorejo, Kecamatan Kotaanyar, Kabupaten Probolinggo. Pantau agenda terbaru masyarakat desa.')
+
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('template/assets/css/agenda.css') }}">

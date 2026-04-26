@@ -1,6 +1,8 @@
 @extends('landing.layouts.app')
 
-@section('title', 'Pusat Unduhan - Desa Sukorejo')
+@section('title', 'Pusat Unduhan Dokumen & Formulir Desa Sukorejo - Kotaanyar')
+@section('meta_description', 'Layanan unduhan dokumen resmi, formulir administrasi, dan surat keterangan Desa Sukorejo, Kecamatan Kotaanyar, Kabupaten Probolinggo.')
+
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('template/assets/css/unduhan.css') }}">

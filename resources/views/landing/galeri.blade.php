@@ -1,6 +1,8 @@
 @extends('landing.layouts.app')
 
-@section('title', 'Galeri Kegiatan - Desa Sukorejo')
+@section('title', 'Galeri Kegiatan Desa Sukorejo - Kotaanyar, Probolinggo')
+@section('meta_description', 'Koleksi dokumentasi foto kegiatan dan momen penting masyarakat Desa Sukorejo, Kecamatan Kotaanyar, Kabupaten Probolinggo.')
+
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('template/assets/css/galeri.css') }}">

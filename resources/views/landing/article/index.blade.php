@@ -1,6 +1,8 @@
 @extends('landing.layouts.app')
 
-@section('title', 'Berita & Artikel - Desa Sukorejo')
+@section('title', 'Berita & Artikel Terbaru Desa Sukorejo - Kotaanyar, Probolinggo')
+@section('meta_description', 'Dapatkan berita terbaru, pengumuman, dan kabar terkini dari Desa Sukorejo, Kecamatan Kotaanyar, Kabupaten Probolinggo secara transparan.')
+
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('template/assets/css/berita.css') }}">
